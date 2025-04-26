@@ -30,6 +30,13 @@ int gcdOptimized(int a, int b){
 
 }
 
+// The key idea is this:
+
+// GCD(a, b) = GCD(b, a % b)
+
+// We keep replacing a with b, and b with a % b, until b becomes 0.
+// At that point, the GCD is a.
+
 int gcdEuclidean(int a, int b){
 
     while(b!= 0){
